@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    background: #e89c9c;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80vw; /* Responsive width for larger screens */
+    max-width: 1000px;
+    height: 80vh; /* Ensures it occupies 80% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevents content overflow from extending beyond the container */
+}
+
+.response-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Enables vertical scroll when content exceeds container height */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.message-wrapper {
+    margin: 10px 0;
+    display: flex;
+}
+
+.user-message {
+    align-self: flex-start;
+    background: #e1ffc7;
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.bot-response {
+    align-self: flex-end;
+    background: #d1e7ff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-left: auto;
+}
+
+.loading-indicator {
+    font-style: italic;
+    color: #999;
+    margin-top: 5px;
+}
+
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+    flex-shrink: 1; /* Keep button small and to the right of the input */
+}
+
+#input-fields{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Scrollbar styles */
+.response-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.response-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.loading-animation {
+    font-style: italic;
+    color: #999;
+    align-self: flex-end; /* Align loading animation to the right */
+    background: #d1e7ff; /* Match the background color of bot responses */
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
